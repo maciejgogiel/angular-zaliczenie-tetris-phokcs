@@ -1,0 +1,16 @@
+// import { Component, VERSION } from "@angular/core";
+
+// @Component({
+//   selector: "ng-if-simple2",
+//   template: `
+//     <button (click)="show = !show">
+//       {{ show ? "Nowa gra" : "Koniec gry" }}
+//     </button>
+
+//     <br />
+//     <div *ngIf="!show"><ng-if-simple></ng-if-simple></div>
+//   `
+// })
+// export class NgIfSimple2 {
+//   show = false;
+// }

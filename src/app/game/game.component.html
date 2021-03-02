@@ -1,0 +1,34 @@
+<div class="game">
+  <br />
+  <span
+    >Use <b>arrows</b> to play, <b>'['</b> to stop and <b>']'</b> to start.
+    <br />
+    Press <b>'reset'</b> button to reset your game</span
+  >
+
+  <!-- <window (keyup.enter)="game.actionStop()"> -->
+  <tetris-core
+    #game
+    (lineCleared)="onLineCleared()"
+    (gameOver)="onGameOver()"
+  ></tetris-core>
+  <div class="btn-group">
+    <button class="button" (click)="game.actionStart()">Start</button>
+    <button class="button" (click)="game.actionStop()">Stop</button>
+    <button class="button" (click)="game.actionReset()">Reset</button>
+    <button class="button" (click)="game.actionRotate()">Rotate</button>
+    <button class="button" (click)="game.actionLeft()">Left</button>
+    <button class="button" (click)="game.actionRight()">Right</button>
+    <button class="button" (click)="game.actionDown()">Down</button>
+  </div>
+  <span class="lastScore">Your last score was {{lastScore}}. </span>
+  <br />
+  <!-- <span class="highscore">Your highscore is {{highscore}}.</span> -->
+  <br /><br />
+
+  <span id="score">
+    Your score is {{lineCounter}}.
+  </span>
+
+  <!-- <div (keyup.enter)="game.actionStop()"> -->
+</div>

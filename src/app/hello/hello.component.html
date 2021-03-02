@@ -1,0 +1,11 @@
+<h1>Hello {{ (playerName | titlecase ) || odRodzica }}!</h1>
+<!-- {{odRodzica}} -->
+
+<div id="input" *ngIf="!isShowGame">
+	<p>Please type your name or nickname and press enter to start 🙈</p>
+	<!-- <input (keyup)="onKeydownEvent($event)"/> -->
+	<input #pNameInput (keyup)="onKeydownEvent($event)" maxlength="15" />
+</div>
+	<div *ngIf="isShowGame">
+		<ng-if-simple></ng-if-simple>
+	</div>
